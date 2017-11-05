@@ -2,4 +2,5 @@
 - refs([article](https://hackernoon.com/refs-in-react-all-you-need-to-know-fb9c9e2aeb81))
 - make array into object
 - don't put style into component
-- 
+- use Jest to test react app and take snapshot
+- use ReactDOMServer to do SSR
