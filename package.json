@@ -6,7 +6,7 @@
   "author": "Andy Chen",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 delete appDev && NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev && yarn logs",
+    "dev": "pm2 delete all && NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev && yarn logs",
     "webpack": "webpack -wd",
     "test": "jest --watch",
     "logs": "yarn pm2 logs appDev"
@@ -38,6 +38,8 @@
     "core-js": "^2.5.1",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "lodash.debounce": "^4.0.8",
+    "lodash.pickby": "^4.6.0",
     "pm2": "^2.7.2",
     "prop-types": "^15.6.0",
     "raf": "^3.4.0",
