@@ -4,3 +4,8 @@
 - don't put style into component
 - use Jest to test react app and take snapshot
 - use ReactDOMServer to do SSR
+- Optimization
+  - use PureComponent
+  - use shouldComponentUpdate(nextProps, nextState)
+  - use componentWillUpdate(nextProps, nextState)
+  
