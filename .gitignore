@@ -1,1 +1,6 @@
 node_modules/
+coverage/
+.DS_Store
+public/app.js
+public/vendor.js
+build/

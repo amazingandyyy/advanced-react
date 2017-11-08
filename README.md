@@ -4,8 +4,13 @@
 - don't put style into component
 - use Jest to test react app and take snapshot
 - use ReactDOMServer to do SSR
-- Optimization
+- React Optimization
   - use PureComponent
   - use shouldComponentUpdate(nextProps, nextState)
   - use componentWillUpdate(nextProps, nextState)
-  
+- build server
+  - update babel
+- build webapck
+  - -p
+  - vendor/app
+  - babel for browser

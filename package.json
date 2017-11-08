@@ -7,15 +7,22 @@
   "license": "MIT",
   "scripts": {
     "dev": "pm2 delete all && NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node --name appDev && yarn logs",
+    "start-prod": "NODE_ENV=production NODE_PATH=./build pm2 start build/server.js -i max --name appProd",
     "webpack": "webpack -wd",
     "test": "jest --watch",
-    "logs": "yarn pm2 logs appDev"
+    "verify-tests": "jest --coverage",
+    "logs": "yarn pm2 logs appDev",
+    "build-webpack": "webpack -p",
+    "build-node": "babel lib -d build --copy-files"
   },
   "babel": {
     "presets": [
       "react",
-      "env",
-      "stage-2"
+      ["env", { "targets": { "node": "current" } }]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-object-rest-spread"
     ]
   },
   "devDependencies": {
